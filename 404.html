@@ -1,0 +1,18 @@
+---
+layout: default
+permalink: /404.html
+title: Page not found
+description: The page you requested could not be found. Return to the NetLogs landing page to continue exploring.
+---
+{% assign repo_url = site.repo_url | default: site.data.links.repo %}
+<main class="not-found" aria-labelledby="not-found-heading">
+  <section class="panel">
+    <p class="eyebrow">404</p>
+    <h1 id="not-found-heading">Page not found</h1>
+    <p class="lede">We couldn’t find what you were looking for. Head back to the NetLogs home page or jump straight to the repository.</p>
+    <div class="actions">
+      <a class="button primary" href="{{ '/' | relative_url }}">Return home</a>
+      <a class="button ghost" href="{{ repo_url }}" target="_blank" rel="noreferrer noopener">View repository</a>
+    </div>
+  </section>
+</main>

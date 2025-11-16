@@ -1,0 +1,41 @@
+# NetLogs landing site configuration
+# Configured for GitHub Pages-friendly builds with sensible defaults.
+title: NetLogs
+description: Developer-focused landing page for the NetLogs browser extension
+url: "https://artboomy.github.io"
+baseurl: "/netlogs-site" # Update if the repository name changes or if publishing to a custom domain.
+permalink: pretty
+lang: en
+timezone: UTC
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Metadata for SEO and link reuse
+repository: Artboomy/netlogs-site
+repo_url: https://github.com/Artboomy/netlogs
+github_username: Artboomy
+email: hello@example.com
+chrome_webstore_url: https://chromewebstore.google.com/detail/netlogs/<extension-id>
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      lang: en
+
+exclude:
+  - Dockerfile
+  - docker-compose.yml
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+  - .dockerignore
+  - .vscode

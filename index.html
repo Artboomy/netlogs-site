@@ -1,0 +1,123 @@
+---
+title: NetLogs for Developers
+lang: en
+description: Capture and share browser network logs with developer-friendly precision, built for GitHub and modern delivery teams.
+---
+{% assign repo_url = site.repo_url | default: site.data.links.repo %}
+{% assign chrome_url = site.chrome_webstore_url | default: site.data.links.chrome_webstore %}
+{% assign contact_email = site.email | default: site.data.links.contact_email %}
+<header class="site-header">
+  <div class="logo" data-i18n="logo">NetLogs</div>
+  <nav>
+    <a href="{{ repo_url }}" target="_blank" rel="noreferrer noopener" data-i18n="navGithub">GitHub</a>
+    <a href="{{ chrome_url }}" target="_blank" rel="noreferrer noopener" data-i18n="navChrome">Chrome Extension</a>
+    <select id="language-switcher" aria-label="Switch language">
+      <option value="en">EN</option>
+    </select>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow" data-i18n="heroTag">Browser Networking Toolkit</p>
+      <h1 data-i18n="heroTitle">Inspect and share network logs with developer-grade precision</h1>
+      <p class="lede" data-i18n="heroBody">NetLogs captures browser traffic, translates it into clean, searchable insights, and streamlines collaboration between frontend, backend, and QA teams.</p>
+      <div class="actions">
+        <a class="button primary" href="{{ chrome_url }}" target="_blank" rel="noreferrer noopener" data-i18n="ctaInstall">Install from Chrome Web Store</a>
+        <a class="button ghost" href="{{ repo_url }}" target="_blank" rel="noreferrer noopener" data-i18n="ctaGithub">View source on GitHub</a>
+      </div>
+      <p class="hint" data-i18n="heroHint">Built for Software Developers who need reliable, shareable HTTP traces.</p>
+    </div>
+    <div class="hero-media">
+      <div class="media-placeholder" aria-label="Product hero screenshot placeholder" data-i18n="heroPlaceholder">Hero screenshot or gif showcasing the live capture view</div>
+    </div>
+  </section>
+
+  <section class="grid" aria-labelledby="feature-heading">
+    <div class="section-header">
+      <p class="eyebrow" data-i18n="featuresTag">Why developers choose NetLogs</p>
+      <h2 id="feature-heading" data-i18n="featuresTitle">Ship faster with better network visibility</h2>
+      <p class="lede" data-i18n="featuresBody">Purpose-built for debugging APIs, validating payloads, and sharing reproducible traces without leaving your browser.</p>
+    </div>
+    <div class="card" data-i18n-scope="feature1">
+      <div class="card-media media-placeholder" aria-label="Placeholder for capture timeline gif" data-i18n="media">Placeholder for a gif of the capture timeline</div>
+      <h3 data-i18n="title">Real-time capture</h3>
+      <p data-i18n="body">Record network requests with headers, bodies, and timing metadata optimized for developer triage.</p>
+    </div>
+    <div class="card" data-i18n-scope="feature2">
+      <div class="card-media media-placeholder" aria-label="Placeholder for request diff screenshot" data-i18n="media">Placeholder for a screenshot showing request diffs</div>
+      <h3 data-i18n="title">Diff-friendly logs</h3>
+      <p data-i18n="body">Clean formatting keeps payload diffs readable in GitHub issues, Slack threads, or incident docs.</p>
+    </div>
+    <div class="card" data-i18n-scope="feature3">
+      <div class="card-media media-placeholder" aria-label="Placeholder for export gif" data-i18n="media">Placeholder for a gif demonstrating one-click export</div>
+      <h3 data-i18n="title">One-click export</h3>
+      <p data-i18n="body">Send HAR files or Markdown summaries directly to teammates for faster reproduction.</p>
+    </div>
+    <div class="card" data-i18n-scope="feature4">
+      <div class="card-media media-placeholder" aria-label="Placeholder for filters screenshot" data-i18n="media">Placeholder for a screenshot of filters and search</div>
+      <h3 data-i18n="title">Powerful filters</h3>
+      <p data-i18n="body">Filter by status codes, endpoints, or latency to spotlight the requests that matter.</p>
+    </div>
+  </section>
+
+  <section class="two-col" aria-labelledby="workflow-heading">
+    <div class="section-header">
+      <p class="eyebrow" data-i18n="workflowTag">Developer workflows</p>
+      <h2 id="workflow-heading" data-i18n="workflowTitle">Designed for modern delivery pipelines</h2>
+      <p class="lede" data-i18n="workflowBody">From PR reviews to on-call handoffs, NetLogs keeps everyone aligned on what shipped, what broke, and why.</p>
+    </div>
+    <div class="stacked">
+      <div class="list-item">
+        <div class="icon" aria-hidden="true">⚡</div>
+        <div>
+          <h3 data-i18n="workflow1Title">Rapid reproduction</h3>
+          <p data-i18n="workflow1Body">Pin flaky API responses, attach the trace to your ticket, and help backend owners fix issues faster.</p>
+        </div>
+      </div>
+      <div class="list-item">
+        <div class="icon" aria-hidden="true">🔍</div>
+        <div>
+          <h3 data-i18n="workflow2Title">Payload validation</h3>
+          <p data-i18n="workflow2Body">Confirm schema changes before merge by comparing serialized bodies across staging and production.</p>
+        </div>
+      </div>
+      <div class="list-item">
+        <div class="icon" aria-hidden="true">🤝</div>
+        <div>
+          <h3 data-i18n="workflow3Title">Shared context</h3>
+          <p data-i18n="workflow3Body">Export developer-friendly reports that make sense to SREs, QA, and product partners.</p>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="media-placeholder tall" aria-label="Placeholder for collaboration screenshot" data-i18n="workflowMedia">Placeholder for a screenshot showing collaboration/export</div>
+      <div class="note" data-i18n="workflowNote">Add your own screenshots or gifs to replace each placeholder and showcase the extension in action.</div>
+    </div>
+  </section>
+
+  <section class="cta" aria-labelledby="cta-heading">
+    <div>
+      <p class="eyebrow" data-i18n="ctaTag">Get started</p>
+      <h2 id="cta-heading" data-i18n="ctaTitle">Try NetLogs on your next debugging session</h2>
+      <p class="lede" data-i18n="ctaBody">Install the Chrome extension, hit record, and share the trace with your team in seconds.</p>
+    </div>
+    <div class="actions">
+      <a class="button primary" href="{{ chrome_url }}" target="_blank" rel="noreferrer noopener" data-i18n="ctaPrimary">Add to Chrome</a>
+      <a class="button ghost" href="{{ repo_url }}" target="_blank" rel="noreferrer noopener" data-i18n="ctaSecondary">Explore the source</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div>
+    <p class="eyebrow" data-i18n="footerTag">Built for developers</p>
+    <p data-i18n="footerBody">Open-source roots with a focus on observability, reproducibility, and developer happiness.</p>
+  </div>
+  <div class="footer-links">
+    <a href="{{ repo_url }}" target="_blank" rel="noreferrer noopener">GitHub</a>
+    <a href="{{ chrome_url }}" target="_blank" rel="noreferrer noopener">Chrome Extension</a>
+    <a href="mailto:{{ contact_email }}" data-i18n="footerContact">Contact</a>
+  </div>
+</footer>
