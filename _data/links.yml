@@ -1,0 +1,4 @@
+# Central link definitions for reuse across layouts and pages.
+repo: https://github.com/Artboomy/netlogs
+chrome_webstore: https://chromewebstore.google.com/detail/netlogs/<extension-id>
+contact_email: hello@example.com
